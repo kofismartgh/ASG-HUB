@@ -4,10 +4,11 @@ terraform {
     bucket = "myterraform-kode01" #enable versioning on bucket
     region = "us-east-1"
     #    dynamodb_table = "myterraformstate-locking" #the hashkey has to be LockID
-    key = "asgterraform.tfstate" #directory
+    key = "kodecloud/asgthubtest1.tfstate" #directory
 
   }
 }
+
 
 
 
