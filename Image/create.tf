@@ -11,11 +11,11 @@ data "aws_instance" "billing_api_image" {
 }
 
 resource "aws_ami_from_instance" "main" {
-  name  = "${var.service_name}_image_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
+  name  = "${var.service_name}_tg_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
   source_instance_id = data.aws_instance.billing_api_image.id
   snapshot_without_reboot = true
   tags = {
-    Name = "${var.service_name}_image_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
+    Name = "${var.service_name}_tg_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
   }
   lifecycle {
     create_before_destroy = true
