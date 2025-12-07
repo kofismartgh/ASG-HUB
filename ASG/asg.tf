@@ -24,7 +24,7 @@ resource "aws_autoscaling_group" "billing_api" {
     id = data.aws_launch_template.main.id
     version = "$Latest"
   }
-  vpc_zone_identifier       = ["subnet-0def7a0a927cb38e5", "subnet-0b99eacc0848e8019"]
+  vpc_zone_identifier       = ["subnet-0b465f80a24e8a503", "subnet-8a76f9a7"]
 
   tag {
     key                 = "ManagedBy"
