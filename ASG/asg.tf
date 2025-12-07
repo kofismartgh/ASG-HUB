@@ -1,5 +1,5 @@
 resource "aws_lb_target_group" "billing_api" {
-    name = "billing_api_tg"
+    name = "billingapi-tg"
     port = 80
     protocol = "HTTP"
     vpc_id = "vpc-07539f61"
