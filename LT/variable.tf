@@ -16,7 +16,7 @@ variable "launch_template_config" {
     instance_type          = "t2.micro"
     is_running_application      = true
     launch_ami             = "ami-0fa3fe0fa7920f68e"
-    existing_instance_name = "" 
+    existing_instance_name = "Billing-Apis_asg" 
   }
 
   validation {
