@@ -14,7 +14,7 @@ variable "launch_template_config" {
 
   default = {
     instance_type          = "t2.micro"
-    is_running_application      = false
+    is_running_application      = true
     launch_ami             = "ami-0fa3fe0fa7920f68e"
     existing_instance_name = "" 
   }
