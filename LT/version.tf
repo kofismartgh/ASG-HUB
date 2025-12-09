@@ -4,7 +4,7 @@ terraform {
     bucket = "myterraform-state01" #enable versioning on bucket
     region = "us-east-1"
     #    dynamodb_table = "myterraformstate-locking" #the hashkey has to be LockID
-    key = "asgthubtest2.tfstate" #directory
+    key = "asgthubtest1.tfstate" #directory
 
   }
 }
