@@ -76,7 +76,8 @@ resource "aws_launch_template" "main" {
     resource_type = "instance"
 
     tags = {
-      Name = "${var.service_name}_asg"
+      #Name = "${var.service_name}_asg"
+      Name = "${var.service_name}_asg_launch_template-${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
       From = "Launch Template to ASG"
     }
   }
