@@ -77,6 +77,7 @@ resource "aws_launch_template" "main" {
 
     tags = {
       Name = "${var.service_name}_asg"
+      From = "Launch Template to ASG"
     }
   }
 
