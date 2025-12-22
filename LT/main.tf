@@ -20,8 +20,8 @@ data "aws_instance" "existing_instance_id" {
 
 resource "aws_ami_from_instance" "main" {
   count = var.launch_template_config.is_running_application ? 1 : 0
-  #name  = "${var.service_name}_tg_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
-  name  = "${var.service_name}_tg"
+  name  = "${var.service_name}_tg_${formatdate("YYYY-MM-DD_hh-mm", timestamp())}"
+  #name  = "${var.service_name}_tg"
 
   source_instance_id      = data.aws_instance.existing_instance_id[0].id
   snapshot_without_reboot = true
