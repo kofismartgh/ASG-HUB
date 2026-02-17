@@ -20,10 +20,10 @@ provider "aws" {
 }
 
 
-#import {
- # to = aws_security_group.cybersourceSG2
- # id = "sg-0f3bbadc059e1ebce"
-#}
+import {
+  to = aws_security_group.cybersourceSG2
+  id = "sg-0f3bbadc059e1ebce"
+}
 
 resource "aws_security_group" "cybersourceSG2" {
         description            = "launch-wizard-8 created 2024-07-18T22:07:26.030Z"
