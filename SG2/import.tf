@@ -11,12 +11,6 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-  default_tags {
-    tags = {
-      ManagedBy ="asgterraform"
-      Project = "Test"
-    }
-  }
 }
 
 
@@ -84,6 +78,7 @@ resource "aws_security_group" "cybersourceSG2" {
             },
         ]
         name                   = "EC2-sg"
+        revoke_rules_on_delete = true
         region                 = "us-east-1"
         tags                   = {}
         vpc_id                 = "vpc-07539f61"
