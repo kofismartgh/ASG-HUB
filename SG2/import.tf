@@ -85,7 +85,6 @@ resource "aws_security_group" "cybersourceSG2" {
         ]
         name                   = "EC2-sg"
         region                 = "us-east-1"
-      + revoke_rules_on_delete = false
         tags                   = {}
         vpc_id                 = "vpc-07539f61"
     }
