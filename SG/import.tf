@@ -58,6 +58,7 @@ resource "aws_security_group" "my_imported_sg" {
     ]
     name        = "EC2-sg"
     region      = "us-east-1"
+    revoke_rules_on_delete = false
     tags        = {}
     tags_all    = {}
     vpc_id      = "vpc-07539f61"
