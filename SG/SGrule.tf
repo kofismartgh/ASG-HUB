@@ -9,7 +9,7 @@ resource "aws_security_group_rule" "allowto_access_cybersoucre_stage" {
 }
 
 
-resource "aws_security_group_rule" "allowto_access_cybersoucre_stage" {
+resource "aws_security_group_rule" "allowto_access_cybersoucre_stagett" {
   type                     = "ingress"
   from_port                = 9000
   to_port                  = 9000
