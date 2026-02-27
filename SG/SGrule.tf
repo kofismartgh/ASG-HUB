@@ -18,3 +18,17 @@ resource "aws_security_group_rule" "allowto_access_cybersoucre_stagett" {
   description              = "From RDS  to UnifiedCheckout"
   security_group_id        = aws_security_group.my_imported_sg.id
 }
+
+
+
+#####
+
+resource "aws_security_group_rule" "egress_to_MuiraBaseUrl" {
+  type              = "egress"
+  from_port         = 443
+  to_port           = 443
+  protocol          = "tcp"
+  cidr_blocks       = ["68.171.169.45/32"]
+  description       = "Connection to MuiraBaseUrl"
+  security_group_id = aws_security_group.my_imported_sg.id
+}
